@@ -1,21 +1,27 @@
-# CLASSVERSE 3D — MVP
+# CLASSVERSE ULTRA 3D
 
-Бір сыныпқа арналған визуалды, браузерде жұмыс істейтін демо-платформа. Технологиялар: HTML, CSS 3D transforms, JavaScript. Сыртқы кітапхана немесе API кілті қажет емес.
+Interactive virtual school campus with real Three.js WebGL, click-to-explore buildings, timetable, quotes, task tracker, and responsive futuristic interface.
 
-## VS Code-та іске қосу
-1. Осы қалтаны VS Code арқылы ашыңыз (`File → Open Folder`).
-2. `index.html` файлын браузерде ашыңыз. Немесе VS Code-та **Live Server** кеңейтімін орнатып, `Go Live` басыңыз.
-3. 3D парталарды басыңыз; тапсырмалар орындаңыз; XP және рейтингті бақылаңыз.
+## Files
+- `index.html` — semantic page structure
+- `style.css` — all layouts, UI effects, animations, mobile rules
+- `script.js` — 3D world, interactions, timetable, quotes, local storage
 
-## GitHub Pages арқылы тегін жариялау
-1. GitHub сайтында **New repository** → `classverse-3d` → **Public** → **Create repository** таңдаңыз.
-2. Репозиторий ішінен **Add file → Upload files** арқылы осы қалтадағы `index.html`, `style.css`, `app.js`, `README.md` файлдарын жүктеңіз және **Commit changes** басыңыз.
-3. **Settings → Pages → Build and deployment → Source: Deploy from a branch** таңдаңыз. `main`, `/ (root)` → **Save**.
-4. Сайт әдетте `https://ПАЙДАЛАНУШЫ.github.io/classverse-3d/` мекенжайында ашылады. URL нақты репозиторий атына тәуелді.
+## Run locally
+Open folder in VS Code and launch `index.html` with **Live Server**. An internet connection is required to load Three.js and Google Fonts from CDN. Use a modern browser with WebGL enabled.
 
-## Маңызды шектеулер
-- Бұл — **MVP демо**. Оқушы тізімі мен рейтингтегі бастапқы ұпайлар үлгі ретінде берілген.
-- Жеке профиль мен миссия ұпайлары браузердің `localStorage` жадында сақталады. Бір браузердегі өзгеріс басқа оқушыға синхрондалмайды.
-- 3D көрінісі CSS 3D transforms негізінде жасалған; Three.js/WebGL қозғалтқышы әзірге жоқ.
-- `LIVE DEMO` жазуы нақты уақыттағы байланыс бар деген сөз емес.
-- Кейін Supabase Auth, database, realtime және Three.js қосып толық онлайн ортаға айналдыруға болады. Оқушылардың нақты жеке деректерін демоға салмаңыз.
+## GitHub Pages
+1. Create public repository `classverse-ultra-3d`.
+2. Upload all three files to the repository root.
+3. Settings → Pages → Build and deployment → Deploy from a branch → `main` → `/(root)` → Save.
+4. Open `https://USERNAME.github.io/classverse-ultra-3d/` (replace USERNAME).
+
+## Customize
+- Edit `timetable` in `script.js` to set real subjects and lesson times.
+- Edit `quotes` to change daily inspiration.
+- Edit `info` to adjust the description of clickable campus locations.
+- Edit links in `index.html` to add your own resources.
+- Change `--accent` in `style.css` for your preferred accent color.
+
+## Important
+The schedule is sample data, not connected to Kundelik. Tasks are stored in each browser's localStorage (not shared across students). This is a front-end MVP with procedural 3D geometry, not a multi-user school management system.
